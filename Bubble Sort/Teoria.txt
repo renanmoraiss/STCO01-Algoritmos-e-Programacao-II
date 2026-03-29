@@ -1,7 +1,0 @@
-Complexidade no melhor caso: O(n)
-Complexidade no caso médio: O(n²)
-Complexidade no pior caso: O(n²)
-
-Exemplo:
-vet[] = {2, 5, 3, 4};
--> O algoritmo começa comparando o vet[0](2) com o vet[0+1](5), como 5 é maior, eu utilizo um auxiliar e troco ele de lugar com o 2, e assim vai...

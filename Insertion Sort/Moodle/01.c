@@ -13,7 +13,8 @@ int main() {
 }
 
 void insertionSort(int A[], int n) {
-    for (int i = 1; i < n; i++) {
+    int i;
+    for (i = 1; i < n; i++) {
         int pivo = A[i];
         int j = i - 1;
         while (j >= 0 && A[j] > pivo) {
