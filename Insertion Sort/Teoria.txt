@@ -1,0 +1,3 @@
+Complexidade no melhor caso: O(n)
+Complexidade no caso médio: O(n²)
+Complexidade no pior caso: O(n²)
