@@ -3,29 +3,29 @@
 int selectionSort(int A[], int n);
 
 int main() {
-    int v[] = {9, 7, 1, 2, 3};
-    int tamanho = 5;
+    int v[] = {10, -3, 7, 0, -1, 5, 2};
+    int tamanho = 7;
     int contador = selectionSort(v, tamanho);
-    printf("%d trocas\n", contador);
     for (int k = 0; k < tamanho; k++) {
         printf("%d ", v[k]);
-    }
+    } printf("\n");
+    printf("trocas: %d\n", contador);
     return 0;
 }
 
 int selectionSort(int A[], int n) {
-    int i, j, indMenorElem, contador = 0;
+    int i, j, min, contador = 0;
     for (i = 0; i < n - 1; i++) {
-        indMenorElem = i;
+        min = i;
         for (j = i + 1; j < n; j++) {
-            if (A[j] < A[indMenorElem]) {
-                indMenorElem = j;
+            if (A[j] < A[min]) {
+                min = j;
             }
         }
-        if (indMenorElem != i) {
-            int aux = A[i];
-            A[i] = A[indMenorElem];
-            A[indMenorElem] = aux;
+        if (min != i) {
+            int temp = A[i];
+            A[i] = A[min];
+            A[min] = temp;
             contador++;
         }
     }
