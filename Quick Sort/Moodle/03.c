@@ -4,9 +4,9 @@ int quickSort(int A[], int inicio, int fim);
 int particao(int A[], int* contador, int inicio, int fim);
 
 int main() {
-    int vet[] = {5, 2, 4, 6};
-    int tamanho = 4;
-    int contador = quickSort(vet, 0, 3);
+    int vet[] = {4, 2, 4, 3, 2, 1};
+    int tamanho = 6;
+    int contador = quickSort(vet, 0, 5);
     for (int k = 0; k < tamanho; k++) {
         printf("%d ", vet[k]);
     } printf("\n");
@@ -21,20 +21,16 @@ int particao(int A[], int* contador, int inicio, int fim) {
     for (j = inicio; j < fim; j++) {
         if (A[j] <= pivo) {
             i++;
-            if (i != j) {
-                (*contador)++;
-                int aux = A[i];
-                A[i] = A[j];
-                A[j] = aux;
-            }
+            (*contador)++;
+            int aux = A[i];
+            A[i] = A[j];
+            A[j] = aux;
         }
     }
-    if(i + 1 != fim) {
-        int temp = A[i + 1];
-        A[i + 1] = A[fim];
-        A[fim] = temp;
-        (*contador)++;
-    }
+    int temp = A[i + 1];
+    A[i + 1] = A[fim];
+    A[fim] = temp;
+    (*contador)++;
     return i + 1;
 }
 
