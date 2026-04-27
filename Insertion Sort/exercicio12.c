@@ -1,7 +1,7 @@
 //HackerRank
-void insertionSort(int N, int arr[]) {
+void insertionSort2(int n, int arr_count, int* arr) {
     int pivot, j;
-    for (int i = 1; i < N; i++) {
+    for (int i = 1; i < n; i++) {
         pivot = arr[i];
         j = i - 1;
         while (j >= 0 && arr[j] > pivot) {
@@ -9,8 +9,8 @@ void insertionSort(int N, int arr[]) {
             j--;
         }
         arr[j+1] = pivot;
-    }
-    for (int i = 0; i < N; i++) {
-        printf("%d ", arr[i]);
+        for (int k = 0; k < n; k++) {
+            printf("%d ", arr[k]);
+        } printf("\n");
     }
 }
