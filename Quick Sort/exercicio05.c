@@ -5,7 +5,7 @@ int partition(int A[], int inicio, int fim);
 void quickSort(int A[], int inicio, int fim);
 
 int main() {
-    int A[] = {5, 4, 3, 2, 1};
+    int A[] = {5, 4, 3, 2, 1, 0, -10};
     size_t n = sizeof(A) / sizeof(A[0]);
     quickSort(A, 0, n - 1);
     for (int i = 0; i < n; i++) {
@@ -15,20 +15,26 @@ int main() {
 }
 
 int partition(int A[], int inicio, int fim) {
-    int pivo = A[fim];
-    int i = inicio - 1;
-    for (int j = inicio; j < fim; j++) {
-        if (A[j] <= pivo) {
+    int pivo = A[inicio];
+    int i = inicio + 1;
+    int j = fim;
+    while (i <= j) {
+        while (i <= j && A[i] <= pivo) {
             i++;
+        }
+        while (j >= i && A[j] > pivo) {
+            j--;
+        }
+        if (i < j) {
             int aux = A[i];
-            A[i] = A[j];
-            A[j] = aux;
+            A[j] = A[i];
+            A[i] = aux;
         }
     }
-    int temp = A[fim];
-    A[fim] = A[i + 1];
-    A[i + 1] = temp;
-    return i + 1;
+    int temp = A[inicio];
+    A[inicio] = A[j];
+    A[j] = temp;
+    return j;
 }
 
 void quickSort(int A[], int inicio, int fim) {
