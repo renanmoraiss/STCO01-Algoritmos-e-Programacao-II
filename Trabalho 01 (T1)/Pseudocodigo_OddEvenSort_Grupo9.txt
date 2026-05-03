@@ -1,0 +1,22 @@
+procedimento oddEvenSort(A: tabela, N: inteiro) 
+  troca = Verdadeiro
+  enquanto (troca = Verdadeiro) faça
+    troca = Falso
+    para i=0 até N-2 passo 2 faça
+      se A[i] > A[i+1] então
+        aux ← A[i]
+        A[i] ← A[i+1]
+        A[i+1] ← aux
+        troca ← Verdadeiro
+      fim-se
+    fim-para
+    para j=1 até N-2 passo 2 faça
+      se A[j] > A[j+1] então
+        aux ← A[j]
+        A[j] ← A[j+1]
+        A[j+1] ← aux
+        troca ← Verdadeiro
+      fim-se
+    fim-para
+  fim-enquanto
+fim-procedimento
