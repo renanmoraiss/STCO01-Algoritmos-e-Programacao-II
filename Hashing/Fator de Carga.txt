@@ -1,0 +1,6 @@
+=> Fator de Carga: Fc = Q/T (Qtd de elementos a inserir / Tamanho da Tabela).
+=> T => Q. Pois não tem como inserir 8 elementos em uma tabela de tamanho 6!
+=> Supondo que iremos inserir 4 elementos, então Fc = 4/6 = 0.67.
+=> Quanto mais o Fator de Carga se aproxima de 1, menos saudável será a nossa Tabela Hash, aumentando a chance de ocorrer colisões.
+=> Porém, quanto mais o Fator de Carga se aproxima de 0, mais espaços vazios a Tabela Hash terá, podendo ser ruim quando se trata de alocação de memória.
+=> O Fator de Carga não possui um número ideal, porém nem tão perto de 0 e nem tão perto de 1 costuma ser bom!

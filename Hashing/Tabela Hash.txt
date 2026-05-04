@@ -1,0 +1,39 @@
+TABELA HASH:
+-> Uma Tabela de Dispersão, também conhecida como Tabela de Espalhamanto ou Tabela Hash, é uma estrutura de dados especial, que associa chaves (int, float, string, bool, etc...) e valores (somente inteiros), atráves de uma Função Hash. Seu objetivo é, a partir de uma chave simples, realizar uma busca rápida e obter o valor desejado.
+-> Objetivo principal: realizar buscas eficientes.
+
+    CHAVE   VALOR
+    [   ]     0
+    [   ]     1
+    [   ]     2
+    [   ]     3
+    [   ]     4
+    [   ]     5
+
+-> Valor: número inteiro de 0 até n - 1 (n = tamanho do vetor)
+-> Chave: o que será usado na nossa busca (pode ser um int, float, char, bool, string, etc...)
+
+-> A ideia é transformar nossa chave em um valor inteiro (índice) que vai de 0 até n - 1. 
+Para isso, vamos utilizar uma função que realiza essa transformação, também chamada de 
+Função de Espalhamento, Função Hash ou Função de Mapeamento.
+
+EXEMPLO:
+Temos que nossa chave é o nome do Aluno, por exemplo: Bia, Carlos, Paula...
+A nossa Função Hash é dada por: Quantidade de letras - 1.
+Ou seja, Bia => 3 - 1 = 2, logo ela será alocada na chave do valor 2.
+Ou seja, Carlos => 6 - 1 = 5, logo ele será alocado na chave do valor 5.
+Ou seja, Paula => 5 - 1 = 4, logo ela será alocada na chave do valor 4.
+
+    CHAVE   VALOR   
+    [   ]     0
+    [   ]     1
+    [Bia]     2
+    [   ]     3
+   [Paula]    4
+   [Carlos]   5
+
+-> Em geral sobra espaço vazio na Tabela Hash, e isso é bom para manter a eficiência da estrutura.
+-> Quanto mais cheia a Tabela Hash fica, maior a chance de ocorrer uma colisão, que é quando a Função Hash gera o mesmo índice para chaves diferentes.
+-> Por exemplo, no exemplo acima, os Nomes "Renan" e "Paula" iriam gerar índices iguais, mesmo que sejam chaves diferentes, pois os dois resultariam em um índice 4.
+-> A Tabela Hash permite uma busca eficiente de forma direta na posição do dado.
+-> Tempo médio de busca, inserção e remoção: O(1), desde que não tenha colisões, o que é muito difícil de acontecer.

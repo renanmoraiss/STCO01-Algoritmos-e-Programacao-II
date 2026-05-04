@@ -1,0 +1,4 @@
+-> Uma Função Hash é boa se:
+1. Produzir um número baixo de colisões (zero é praticamente impossível na prática);
+2. Ser facilmente computável, ou seja, não adianta de muito coisa uma Função Hash produzir poucas colisões, mas que fica um grande intervalo de tempo realizando cálculos, o que torna a busca menos eficiente;
+3. Ser uniforme, ou seja, ter um tempo constante. Independente da chave, a Função irá realizar o cálculo em tempo constante e mapear a chave para o seu valor.

@@ -1,0 +1,5 @@
+Em uma faculdade é criado um Banco de Dados com o RA e o Nome de todos
+os alunos. Como é possível criar uma busca eficiente neste BD?
+
+-> Busca Sequencial: O(n) => no pior caso iremos até o último elemento!
+-> Busca Binária: O(log n) => somente para dados ordenados!

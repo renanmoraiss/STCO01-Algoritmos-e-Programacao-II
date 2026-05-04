@@ -1,0 +1,18 @@
+Função Hash: Quantidade de letras - 1
+
+Chaves de entrada: Paula e Maria,
+
+=> Paula = 5 - 1 = 4.
+=> Maria = 5 - 1 = 4.
+=> Colisão! A Função Hash gerou o mesmo valor (4) para duas chaves diferentes.
+
+    CHAVE   VALOR   ÍNDICE
+    [   ]     0
+    [   ]     1
+    [   ]     2
+    [   ]     3
+   [Paula]    4
+    [   ]     5
+
+=> A Função realizou o cálculo para a chave "Paula" e resultou no valor 4.
+=> A Função realizou o cálculo para a chave "Maria", mas resultou na mesma chave da chave "Paula", e agora?

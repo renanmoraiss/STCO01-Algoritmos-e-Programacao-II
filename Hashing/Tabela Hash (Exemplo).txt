@@ -1,0 +1,24 @@
+=> Tamanho: 6.
+=> 4 elementos serão inseridos.
+=> Fc = Q/T .: 4/6 = 0.67.
+=> Função Hash: Chave mod Tamanho, ou, Chave % Tamanho (resto).
+
+=> Chave:  41  36  7  18
+=> Valor:  5   0   1  0
+
+=> Tentei inserir a Chave = 18, mas resultou no mesmo Valor que a Chave = 36. Ou seja, ocorreu uma colisão!
+=> Quando ocorre uma colisão, tenho duas opções para realizar o tratamento:
+1. Colocar o 18 ao lado da Chave 36 utilizando uma lista encadeada;
+2. Colocar o 18 no próximo espaço livre, que na Tabela abaixo é o espaço do Valor 2.
+
+    CHAVE VALOR   
+    [36]    0
+    [7]     1
+    [  ]    2
+    [  ]    3
+    [  ]    4
+    [41]    5
+
+=> Realizo uma busca da Chave = 13.
+=> A Função calcula o Valor para a chave 13, que dá 1.
+=> A Chave associada ao Valor 1 é 7!
