@@ -1,0 +1,27 @@
+=> Função Hash: h(x) = chave % 6
+=> Chave = 21 .: Valor = 3
+=> Chave = 12 .: Valor = 0
+=> Chave = 9 .: Valor = 3
+=> Chave = 10 .: Valor = 4
+=> Chave = 33 .: Valor = 3
+
+Colisões:
+Chave = 21, Chave = 9, Chave = 33
+
+  VALOR  CHAVE
+    0    [   ]->[12]
+    1    [   ]
+    2    [   ]
+    3    [   ]->[21]->[9]->[33]
+    4    [   ]->[10]
+    5    [   ]
+
+=> Na técnica de tratamento de colisões de Encadeamento Exterior, cada posição da Tabela Hash irá armazenar um ponteiro para apontar para uma lista encadeada, ao invés de simplesmente armazenar apenas um registro em cada espaço diretamente.
+
+=> Sabemos que cada nó de uma lista encadeada armazena duas informações, o valor do nó e o endereço para o próximo elemento. No valor 0, o primeiro nó possui o valor 12 e um endereço para NULL, então sabemos que não ocorreu colisão entre chaves nesse valor.
+
+=> Função Hash realiza Inserção, Busca e Remoção.
+=> Inserção: inserimos a chave, podendo ser uma string, int, float, char, bool, etc, e a função hash mapeaia essa chave para um valor inteiro na Tabela Hash.
+=> Busca: a chave que deseja ser buscada passa pelo processo do cálculo da Função Hash e é transformada em um valor inteiro. Se não possuir nenhum elemento nessa posição da Tabela Hash, então o processo encerrra. No entanto, se possuir um elemento, ele verifica o elemento do nó da lista encadeada e verifica se possui um próximo, se sim, então ele vai verificando, e se algum elemento da lista for igual a chave buscada, então a busca foi concluída com sucesso, caso contrário, não.
+=> Remoção: a chave que deseja ser removida passa pelo processo do cálculo da Função Hash e é transformada em um valor inteiro, então essa chave é buscada nessa posição da Tabela Hash, se não possuir valor nessa posição, então nada é removido. Se a chave estiver na lista encadeada, então o processo segue o mesmo padrão de remover elemento de lista encadeada: se o elemento a remover for o último, então percorremos até o penúltimo elemento da lista e definimos seu ponteiro como NULL. Se o elemento a remover for o primeiro, então atualizamos o ponteiro head da lista para o segundo elemento da lista. Se o elemento estiver no meio da lista, então o ponteiro anterior a esse elemento passa a apontar para o elemento seguinte ao elemento a ser removido.
+=> Por isso, é essencial que a Função Hash seja uniforme, de modo que irá evitar muitas colisões, e consequentemente, melhorar a eficiência da busca e remoção na Tabela Hash de uma determinada chave.

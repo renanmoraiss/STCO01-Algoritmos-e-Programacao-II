@@ -1,0 +1,6 @@
+● Encadeamento Exterior:
+   => Lista encadeada.
+
+● Encadeamento Interior:
+   => Heterogêneo.
+   => Homogêneo (Teste linear).
